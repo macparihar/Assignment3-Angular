@@ -1,0 +1,11 @@
+<div>
+    <h2>Person Component</h2>
+
+    <div *ngIf="authService.isAuthenticated()">
+      <!-- Display content for authenticated users -->
+      <p>Welcome to the Person Component!</p>
+      <p>welcome, {{ username }}</p>
+      <button *ngIf="authService.isInRole('admin')" (click)="update()">Update</button>
+    
+    </div>
+  </div>
